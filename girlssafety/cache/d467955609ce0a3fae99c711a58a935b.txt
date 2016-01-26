@@ -1,0 +1,151 @@
+{
+   "predictions" : [
+      {
+         "description" : "1230 San Tomas Expressway, Santa Clara, CA, United States",
+         "id" : "73135cae228cefe4c824bb722b86f25f2d14698e",
+         "matched_substrings" : [
+            {
+               "length" : 10,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ9AAAAwircm5aSYNrcXsOfuBNJ4pYhcfeXd89gEpTYFQdmjTlr4vA1rl-jz8Ij8ZiVApVyjKQVJZeZdt0dr2-pb8CpkRIQSKBrVZPtoKIDnULzB2CTgBoUsr4iuQwSSiKymy1YLn5pRTaJ0GU",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Expressway"
+            },
+            {
+               "offset" : 27,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 40,
+               "value" : "CA"
+            },
+            {
+               "offset" : 44,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Road, San Jose, CA, United States",
+         "id" : "e8f1648722f175e0c134968d80c3d7502dcb36fa",
+         "matched_substrings" : [
+            {
+               "length" : 10,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAAoEO_yPkzf9fOI_QjLA8mXnzgpnA_pAe3C8DUusjX2vreEVuuQVdb-bYVXNhjN_5Pk-sGl6D_zcCyo8Oa7pT3KBIQWuIZYZpYHwB-qgU89vtGZhoUKn40Gy9W3rN4kIYfO9ZqCW2kT6c",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Timoteo Canyon Road, Redlands, CA, United States",
+         "id" : "179a48ebec8ad2043c14165a2e867fa87bfc36cd",
+         "matched_substrings" : [
+            {
+               "length" : 10,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ9AAAAbLPjhruRvEvDYFdt17ewIRYIKxZLP1FohBU1PMJR6PgiRq3Z8sIbx_f0kyrX6tQ6YDlSSkn_tLCc0TJ2TktGyhIQXH45zvXuWZZV9gzVVwepSRoUhzG3jhX30C_al3Xqg-p4HXJi3Rc",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Timoteo Canyon Road"
+            },
+            {
+               "offset" : 30,
+               "value" : "Redlands"
+            },
+            {
+               "offset" : 40,
+               "value" : "CA"
+            },
+            {
+               "offset" : 44,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Creek Trail, Santa Clara, CA, United States",
+         "id" : "3e22418d050f370b7c0a4b3b8b5c9e6306275041",
+         "matched_substrings" : [
+            {
+               "length" : 10,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRFAAAAish2WEk7tpC97J_CoVzjJJkDeD38Ph83DHTXWTTBJOPcWpYJYizpTXI5CPuZYM5sX5zvuLn7YQ1UztN7tt9SVLzzz-l-HFF5aQDIAbneoT0SEA4_XdFKum7e2fkq8_1ySxAaFEHrnvI0v0ke79UZMjWFeGcNM7wX",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Creek Trail"
+            },
+            {
+               "offset" : 35,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 48,
+               "value" : "CA"
+            },
+            {
+               "offset" : 52,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "San Tam Road, 1230, San Tin, Hong Kong",
+         "id" : "301f1ef4b0f1af598abac45b67e7a570b231a19d",
+         "matched_substrings" : [
+            {
+               "length" : 18,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQqAAAAcs9jg6eM8dUKkjCA24zbIlmBQ_SG5aCjTh9NtEvhpdrosl_MeslLpDMOI_mTsoquEhA3G4-d6juY6ayFG0Rk4GzOGhR9JorRAHPmmc509PKcoi0JwYdbXQ",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San Tam Road, 1230"
+            },
+            {
+               "offset" : 20,
+               "value" : "San Tin"
+            },
+            {
+               "offset" : 29,
+               "value" : "Hong Kong"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

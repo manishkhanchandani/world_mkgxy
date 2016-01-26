@@ -1,0 +1,139 @@
+{
+   "predictions" : [
+      {
+         "description" : "Norderstraße 123, Flensburg, Germany",
+         "id" : "18ecbee1f4f48a968d9c63ecf7f286868dd676a8",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 13
+            }
+         ],
+         "reference" : "CjQpAAAA3O8U-bGZ1L8GLvJdJhVho36UmPOj3aRHhTYWEZVcY4R83CewsBW2RwLjDbqmuL9vEhCy29YGA2JOcSsAwvAFx-xbGhSOaI6wmHcfsAifGR51Wzcu0mPuIg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Norderstraße"
+            },
+            {
+               "offset" : 13,
+               "value" : "123"
+            },
+            {
+               "offset" : 18,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 29,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "12347, Berlin, Germany",
+         "id" : "3f56d16f8dfcbc758a04bfd2d8d215433db6543c",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAAVQ_JrN744cRgvyMmS-fakTledAU3loyl94PJWfGzh-ag-gKWnZ_Hr_WPQsvzsJEPEhDymZhqrx15iR5OruW6AUZTGhRjFNECc5EhPh-Nu0kaVFBTuXoh9g",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12347"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12305, Berlin, Germany",
+         "id" : "618ef74e37c61d2ca9eb9e241e0a25767aa6c3b2",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAA5USORla3r5A1Spf1hRh-gARo3RnhIotKXv6YlY37yitnHeo48C7T522bUEQlhQktEhD2RjPi26DcWwo1Rm5THoAKGhTOU9qex3vtzxdpxRbHe6hbrbl9bg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12305"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12355, Berlin, Germany",
+         "id" : "8805cfe07179b1de836122cea539714afbc25b8f",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAABSpfk7qjDT8oN8-pa8VeP2aDzhZYwh7B4YB_zucGsNrn5WbwAXOsuvqwkZ5KgmpIEhC-Tlr8geai6omym72W1gpvGhRvTuqz-RPyaJs-fOJin0FilTTOaw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12355"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12359, Berlin, Germany",
+         "id" : "7f34e19b6eae61effcf6e787dcb55c9d2a21ef7b",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAAKhh1X2WpmOBU4YULpbN6lIJuuQlmf1Et_bNNQ47wJkQjQ6L6l_vh3VH-S3DotAvHEhBiFb-NrfWjGOumCnV06FuhGhTy_tjJaS2G7oL3ueGniz7s08faJA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12359"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

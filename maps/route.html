@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+var latlngA = qs["latlngA"];
+var explode = latlngA.split(",");
+var lata = explode[0];
+var lona = explode[1];
+var latlngB = qs["latlngB"];
+var explode = latlngB.split(",");
+var latb = explode[0];
+var lonb = explode[1];
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+<script language="javascript">
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+function initialize() {
+	directionsDisplay = new google.maps.DirectionsRenderer();
+
+	var myLatlnga = new google.maps.LatLng(lata,lona);
+	var myLatlngb = new google.maps.LatLng(latb,lonb);
+  var mapOptions = {
+    zoom: 14,
+    center: myLatlnga,
+    panControl: true,
+    zoomControl: true,
+    scaleControl: true
+  }
+  
+  var imagea = 'map-icon-a.png';
+  var imageb = 'map-icon-b.png';
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+	directionsDisplay.setMap(map);
+  calcRoute(myLatlnga, myLatlngb);
+}
+function calcRoute(start, end) {
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode.WALKING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="map-canvas"></div>
+</body>
+</html>

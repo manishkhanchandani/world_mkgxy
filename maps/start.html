@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+var lat = qs["lat"];
+if (!lat) lat = 37.338475;
+var lon = qs["lon"];
+if (!lon) lon = -121.885794;
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+<script language="javascript">
+//document.title = lat + "," + lon;
+
+function displayLocation( position ) {
+  lat = position.coords.latitude;
+  lon = position.coords.longitude;
+  document.title = lat + "," + lon;
+  doaction();
+}
+function handleError( error ) {
+	var errorMessage = [ 
+		'We are not quite sure what happened.',
+		'Sorry. Permission to find your location has been denied.',
+		'Sorry. Your position could not be determined.',
+		'Sorry. Timed out.'
+	];
+
+	alert( errorMessage[ error.code ] );
+}
+function initialize() {
+  useragent = navigator.userAgent;
+   if ( navigator.geolocation ) {
+		navigator.geolocation.getCurrentPosition( displayLocation, handleError );
+	}
+  doaction();
+}
+function doaction()
+{
+  
+  document.title = lat + "," + lon;
+	var myLatlng = new google.maps.LatLng(lat,lon);
+  var mapOptions = {
+    zoom: 14,
+    center: myLatlng,
+    panControl: true,
+    zoomControl: true,
+    scaleControl: true
+  }
+  var image = 'map-icon-a.png';
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+	var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+	  draggable:true,
+	  icon: image
+  });
+  
+  google.maps.event.addListener(marker, 'dragend', function() {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+	document.title = marker.getPosition().lat() + "," + marker.getPosition().lng();
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="map-canvas"></div>
+</body>
+</html>

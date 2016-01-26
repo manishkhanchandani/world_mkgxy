@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bounds Box</title>
+<style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  #map_canvas {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panelfrom {
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+var lat = qs["lat"];
+var lon = qs["lon"];
+var from = qs["from"];
+var to = qs["to"];
+var MODE = qs["mode"];
+if (!lat) lat = 37.781577;
+if (!lon) lon = -122.409668;
+if (!from) from = null;
+if (!to) to = null;
+if (!MODE) MODE = 'DRIVING';
+//var lat = 37.781577;
+//var lon = -122.409668;
+</script>
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript">
+var map;
+var markers = [];
+var infowindow = null;
+var initialLocation;
+var geocoder;
+var marker1, marker2;
+var start, end;
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var imagea = 'map-icon-a.png';
+var imageb = 'map-icon-b.png';
+var viewportBox;
+var latlng;
+var myOptions;
+	  // Add a marker to the map and push to the array.
+function addMarker(location, description) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  bindInfoWindow(marker, map, infowindow, description);
+  markers.push(marker);
+}
+
+// Sets the map on all markers in the array.
+function setAllMap(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+  setAllMap(null);
+}
+
+// Shows any markers currently in the array.
+function showMarkers() {
+  setAllMap(map);
+}
+
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+  clearMarkers();
+  markers = [];
+}
+function bindInfoWindow(marker, map, infowindow, strDescription) {
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(strDescription);
+        infowindow.open(map, marker);
+    });
+}
+      function initialize() {
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		geocoder = new google.maps.Geocoder();
+        latlng = new google.maps.LatLng(lat,lon);
+        myOptions = {
+          zoom: 17,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		panControl: true,
+		zoomControl: true,
+		scaleControl: true
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"),
+            myOptions);
+		directionsDisplay.setMap(map);
+		directionsDisplay.setPanel(document.getElementById('directions-panel'));
+		infowindow =  new google.maps.InfoWindow({
+            content: ""
+        });
+        
+		document.getElementById('address').value = from;
+		document.getElementById('addressto').value = to;
+		if (from) {
+			codeAddress();
+		}
+		if (to) {
+			codeAddressto();
+		}
+
+        google.maps.event.addListener(map, 'idle', function(event) {
+            process();
+        });
+      };
+function process()
+{
+	var bounds = map.getBounds();
+
+            var ne = bounds.getNorthEast();
+            var sw = bounds.getSouthWest();
+			/*var first = new google.maps.LatLng(ne.lat(), sw.lng());
+			var second = new google.maps.LatLng(sw.lat(), ne.lng());
+			var marker1 = new google.maps.Marker({
+				position: first,
+				map: map,
+				icon: 'map-icon-a.png'
+			  });
+			var marker2 = new google.maps.Marker({
+				position: second,
+				map: map,
+				icon: 'map-icon-b.png'
+			  });*/
+
+            var viewportPoints = [
+                ne, new google.maps.LatLng(ne.lat(), sw.lng()),
+                sw, new google.maps.LatLng(sw.lat(), ne.lng()), ne
+            ];
+            /*strokeOpacity = 0 , if don't want to show the border moving. */
+            if (viewportBox) {
+                viewportBox.setPath(viewportPoints);
+            } else {
+                viewportBox = new google.maps.Polyline({
+                    path: viewportPoints,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0, //strokeOpacity: 1.0,
+                    strokeWeight: 4 
+                });
+                viewportBox.setMap(map);
+            };
+            //var info = document.getElementById('info');
+			var url = 'http://world.mkgalaxy.com/girlssafety/proxy.php?jsoncallback=?&bbox='+sw.lng()+','+sw.lat()+','+ne.lng()+','+ne.lat();
+			//url = 'http://sanfrancisco.crimespotting.org/crime-data?&jsoncallback=?&format=json&count=200&bbox='+sw.lng()+','+sw.lat()+','+ne.lng()+','+ne.lat();
+            /*info.innerHTML = 'NorthEast: ' + ne.lat() + '   ' + ne.lng() + 
+                '<br />' + 'SouthWest: ' + sw.lat() + '   ' + sw.lng() +
+				'<br />' + 'Url: ' + url;*/
+			var content = null;
+			$.getJSON(url, function(data){
+				var person = data.features;
+				if (person.length > 0) {
+					for (var x in person) {
+						//console.log(person[x].geometry.coordinates[0]);
+						//console.log(person[x].geometry.coordinates[1]);
+						content = "<h3>" + person[x].geometry.coordinates[1]+", "+person[x].geometry.coordinates[0] + "</h3>";
+						content = content + "<b>Crime Type: </b>" + person[x].properties.crime_type;
+						content = content + "<br>";
+						content = content + "<b>Description: </b>" + person[x].properties.description;
+						content = content + "<br>";
+						content = content + "<b>Date: </b>" + person[x].properties.date_time;
+						var latlngCustom = new google.maps.LatLng(person[x].geometry.coordinates[1], person[x].geometry.coordinates[0]);
+						console.log(latlngCustom);
+						addMarker(latlngCustom, content);
+					}
+					setAllMap(map);
+					//showMarkers();
+				}
+			});
+}
+function codeAddress() {
+  var address = document.getElementById('address').value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+		start = results[0].geometry.location;
+      map.setCenter(results[0].geometry.location);
+      marker1 = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+	  		icon: imagea,
+	  draggable:true,
+      });
+	  //var desc = "Location: " + start.lat() + ", "  + start.lng();
+	  //bindInfoWindow(marker2, map, infowindow, desc);
+	  google.maps.event.addListener(marker1, 'dragend', function() {
+		//document.title = marker.getPosition().lat() + "," + marker.getPosition().lng();
+		start = new google.maps.LatLng(marker1.getPosition().lat(),marker1.getPosition().lng());
+	  });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+
+function codeAddressto() {
+  var address = document.getElementById('addressto').value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+		end = results[0].geometry.location;
+      map.setCenter(results[0].geometry.location);
+      marker2 = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+	  		icon: imageb,
+	  draggable:true,
+      });
+	  //var desc = "Location: " + end.lat() + ", "  + end.lng();
+	  //bindInfoWindow(marker2, map, infowindow, desc);
+	  google.maps.event.addListener(marker2, 'dragend', function() {
+		//document.title = marker.getPosition().lat() + "," + marker.getPosition().lng();
+		end = new google.maps.LatLng(marker2.getPosition().lat(),marker2.getPosition().lng());
+	  });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+function calcRoute() {
+	marker1.setMap(null);
+	marker2.setMap(null);
+	var selectedMode = MODE; //document.getElementById('mode').value;
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode[selectedMode],
+	  provideRouteAlternatives: true
+  };
+  directionsService.route(request, function(response, status) {
+	  console.log(response);
+	  
+    if (status == google.maps.DirectionsStatus.OK) {
+		/*for (var i = 0, len = response.routes.length; i < len; i++) {
+			new google.maps.DirectionsRenderer({
+				map: map,
+				directions: response,
+				routeIndex: i
+			});
+		}*/
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+</script>
+</head>
+<body onLoad="initialize()">
+<div id="panelfrom">
+      <input id="address" type="textbox" value="san francisco, ca">
+      <input type="button" value="From" onclick="codeAddress()">
+	  <br />
+      <input id="addressto" type="textbox" value="oakland, ca">
+      <input type="button" value="To" onclick="codeAddressto()">
+	  <br /> 
+	  <select id="mode" onchange="calcRoute();">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+	<input type="button" value="Route" onclick="calcRoute();">
+    </div>
+  <div id="map_canvas"></div>
+</body>
+</html>

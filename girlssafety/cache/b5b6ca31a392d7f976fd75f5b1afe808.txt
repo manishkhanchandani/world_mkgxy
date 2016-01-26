@@ -1,0 +1,155 @@
+{
+   "predictions" : [
+      {
+         "description" : "1230 San Tomas Expressway, Santa Clara, CA, United States",
+         "id" : "73135cae228cefe4c824bb722b86f25f2d14698e",
+         "matched_substrings" : [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ9AAAAh2--J0JP-c7a_sXhR6TPPOUGn_-gE2nXRixv2WvE-zVxxlaOpnmRG8A_hRvl9hN8-c7eNTNNEw6oeLidlauh5hIQNu5TXp6FVJtYfgLg26X51RoUq6QwTrb8tNRoKir6bkTebwLF7w8",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Expressway"
+            },
+            {
+               "offset" : 27,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 40,
+               "value" : "CA"
+            },
+            {
+               "offset" : 44,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Road, San Jose, CA, United States",
+         "id" : "e8f1648722f175e0c134968d80c3d7502dcb36fa",
+         "matched_substrings" : [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAAgRfbbNrkVyPHtqvP-Z1yIaOpLbqpJr49B9YH0x0MBx_ZI8TArrn8jDG8SCw-adCqh87-6jaLk_SCZ535W1bj9hIQ93QliSDxnc6FX-6GVuUPYBoUm62C-AZ7rVUvQWYYgsKul3EmWXA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Creek Trail, Santa Clara, CA, United States",
+         "id" : "3e22418d050f370b7c0a4b3b8b5c9e6306275041",
+         "matched_substrings" : [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRFAAAARJC8GU1lscPLmR79VhanrublWzJ4N3A7coLcIIqjoSCMJOf_Pd9YmCmuliwsgPP4ckTWE0dAnYWZDuZeYoeyEjeHBrEbUrj9b6FVJYlTpnUSEPpvyCJdQ7nLUHoWxwpHVZsaFDY-fRCnMTTu5ZU6nRX4dKTBHbYE",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Creek Trail"
+            },
+            {
+               "offset" : 35,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 48,
+               "value" : "CA"
+            },
+            {
+               "offset" : 52,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Parkway, San Jose, CA, United States",
+         "id" : "28cede703b633768bc72de408b6a12eb102775cc",
+         "matched_substrings" : [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ-AAAAl8awZP5n_s9BSyJpAYPnz_TjnrYpJl-nI_bBHR7jUuAWuuD8CjXanq1tIYE-RNCtEnJKMpzUDnWpP4Obzut9ZBIQKEI6s3hBfBRjCKJ56swy7BoUzlbz_iySSM-vIrZCdP0T2_z4fUA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Parkway"
+            },
+            {
+               "offset" : 31,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 41,
+               "value" : "CA"
+            },
+            {
+               "offset" : 45,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Expressway, San Jose, CA, United States",
+         "id" : "2dfe26c68b7d8fcfa8199cbb360568bbb3ae7deb",
+         "matched_substrings" : [
+            {
+               "length" : 14,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ6AAAALvhO9jvkiyUZYS3GW_TwTfR7ZIIUc7oLrBRGshAb2gR6PDBdU9r51zj9RLrdC-3oCwQBsA8rBxhTpWmve4Jp8RIQoUhg38_lB5pVttG_6yEAuhoUL2LPyrw3qPIswNqB13P1S5WNq74",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Expressway"
+            },
+            {
+               "offset" : 27,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 37,
+               "value" : "CA"
+            },
+            {
+               "offset" : 41,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

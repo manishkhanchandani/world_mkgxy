@@ -1,0 +1,9 @@
+Set current location
+http://world.mkgalaxy.com/alamedacounty/current_location/update.php?latitude=37.303062&longitude=-121.978578&uid=112913147917981568678&accuracy=&altitude=&address=
+
+Map
+http://world.mkgalaxy.com/alamedacounty/map.php?lat=0&lon=0
+
+Set Settings
+http://world.mkgalaxy.com/alamedacounty/settings/update.php?uid=&gender&birthday=&birthmonth&birthyear&birthhour&birthminute=&birthlocation&marital_status=&education=&profession=
+

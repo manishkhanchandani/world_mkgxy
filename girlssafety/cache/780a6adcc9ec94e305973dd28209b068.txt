@@ -1,0 +1,139 @@
+{
+   "predictions" : [
+      {
+         "description" : "1230 Austria",
+         "id" : "5b8267feaa14e737810d00d83475a4c5e5097ad8",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQkAAAAH9djzIrG-QlR2Qaj58LMq2zADBlxG00LiKqqzZiH7XSpukuZXSw9VlSnXE3sHdiOEhCDr0UMmIzzPoYfHYne_2gzGhRioUsFM96swoq7kG85sj5snn0coQ",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230"
+            },
+            {
+               "offset" : 5,
+               "value" : "Austria"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "1230, Slovenia",
+         "id" : "d49ba03ce0b072fb3d30a5ad2d9430fc8cdfa086",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQmAAAA-JW9mhGHCeqyTrshn8dq8wr5zHxbo9xx4Rv7C1N66FEq4hkjRtLZTv-BcjlFoOcwEhB0HkAsVt5_xQXIk0cErs5dGhTlCa-tGrjS54smxrdHDujAsSAv9Q",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230"
+            },
+            {
+               "offset" : 6,
+               "value" : "Slovenia"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "Avenida do Batel, 1230, Batel, Parana, Brazil",
+         "id" : "d94ef3497837d6f1f47f47f75af8df0566dc286a",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 18
+            }
+         ],
+         "reference" : "CkQxAAAA4DseO3Ns_TycDhymX07mmz5d47HELSdJ9kl0fP85PPrLghbmt2tSxlH5GmGkKMLqTq5qMhMkfEA3zPgKnu7KMxIQqdQrR2KEyM53WMmGp3TiwRoUHLiUn-As_WcNR17vSaKY80blVG4",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Avenida do Batel"
+            },
+            {
+               "offset" : 18,
+               "value" : "1230"
+            },
+            {
+               "offset" : 24,
+               "value" : "Batel"
+            },
+            {
+               "offset" : 31,
+               "value" : "Parana"
+            },
+            {
+               "offset" : 39,
+               "value" : "Brazil"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230, Bangladesh",
+         "id" : "9fa97e0e6e1192d3ac0a0de6a392a129ed80ae3e",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQoAAAAg4N5bRyqx5R4NNpejWFgt2r0b0sRMdwKIOtJ3G4DKTdZEs77iSD5DUIUCap_zkAkEhD0x4dp5WMbMRSo0WSLun1EGhR114i-xP4fyC_SKRs3-sgTh7YNQw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230"
+            },
+            {
+               "offset" : 6,
+               "value" : "Bangladesh"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "1230 Peachtree Street Northeast, Atlanta, GA, United States",
+         "id" : "83fc290386dd2bce71cc7da849a1c4509e941b4f",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CmRTAAAAOgXVSrQqeYbhrFykY7xpZVfOyVivNHVDHC1K-JLo7XdlDZ62XfsurA0QJcqNC3MCeOJOSsSgI5voWPpAPEApiy6NHcV-FOCbILKcCBqwyY1DgutULxuap3OCKzBXMezqEhAmbLKCEHQxQNwmWIOC4ajcGhThMe1OmMnh0tZWCey6QRHjjVwqYg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230"
+            },
+            {
+               "offset" : 5,
+               "value" : "Peachtree Street Northeast"
+            },
+            {
+               "offset" : 33,
+               "value" : "Atlanta"
+            },
+            {
+               "offset" : 42,
+               "value" : "GA"
+            },
+            {
+               "offset" : 46,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "street_address", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

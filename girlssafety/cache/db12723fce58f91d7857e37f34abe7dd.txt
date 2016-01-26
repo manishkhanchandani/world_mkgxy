@@ -1,0 +1,155 @@
+{
+   "predictions" : [
+      {
+         "description" : "1230 San Tomas Aquino Road, San Jose, CA, United States",
+         "id" : "e8f1648722f175e0c134968d80c3d7502dcb36fa",
+         "matched_substrings" : [
+            {
+               "length" : 19,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAAxgF4G56kwOl0wMmju1mMgdt0JSdOuciorxBNDrmSqq7zGrbJZ4m0XTiW7fexQljUe1MfrPp1I5kKTBvi49js3RIQtmHm1F8cooWzEcIX_8y99hoUds0hSWnimkNe97zmZ6UZPzIoCHY",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Creek Trail, Santa Clara, CA, United States",
+         "id" : "3e22418d050f370b7c0a4b3b8b5c9e6306275041",
+         "matched_substrings" : [
+            {
+               "length" : 19,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRFAAAAk-X3TYInA9VvGX3FAltrfdZJx9x4Q1GluGo8mTcmnX5VPn7Q4e__cyI7qMEyQUhiwtwX2G50Mu-MqcrQrTgR1fzfkDMVgHvCP1SVL4LYRnYSEIxVz0BhK5vAqw7DeCvsoXsaFD_ofcvMxiX-Sf3DppOvmUrMswxz",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Creek Trail"
+            },
+            {
+               "offset" : 35,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 48,
+               "value" : "CA"
+            },
+            {
+               "offset" : 52,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Parkway, San Jose, CA, United States",
+         "id" : "28cede703b633768bc72de408b6a12eb102775cc",
+         "matched_substrings" : [
+            {
+               "length" : 19,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ-AAAAZwvAl2IIdWmUqzoS4FOnyKuxIEcAsR1rpKhoHe-Fz9MGNQNFNyG_GhnFD_wSeuw6hPlT6XDQYxYUdu2revTrkhIQ9oV2PMTD0kcsMO-M3OLY3hoU4P2gXdomxmWA_5x9uJKpWz_w2mc",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Parkway"
+            },
+            {
+               "offset" : 31,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 41,
+               "value" : "CA"
+            },
+            {
+               "offset" : 45,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino/Saratoga Creek Trail, San Jose, CA, United States",
+         "id" : "2ff3a29ae9fe89b50dd87f85e6c85c3ad6694de4",
+         "matched_substrings" : [
+            {
+               "length" : 19,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRLAAAAkBgg87LvrzueM6vb6EwgzAnn-2e9lt6GjMbNiUNF2W4LHXYGGe4QJGUNVggViEvI3laejsjD0ISNoPziFvHHJpd4_OSKacu0qr8NE95sNxwSEDxR7L2recGhJYHaPAEzAT4aFKL3bXKkmRI1Yz1SwsYZgwxBebFN",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino/Saratoga Creek Trail"
+            },
+            {
+               "offset" : 44,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 54,
+               "value" : "CA"
+            },
+            {
+               "offset" : 58,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 S San Tomas Aquino Rd, Campbell, CA, United States",
+         "id" : "a8ac568d3ab214d21dfa356cf6878425a27805b6",
+         "matched_substrings" : [
+            {
+               "length" : 26,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAAwQoAEDhwBeuzLCXQhTAabO6FUg4InfnZui3WFNw6zx_5Wg549caHF4QWOf7ybsc5K9fIEB0X_kZAALuwPcVbkxIQzirKsndVe1gWu3XSY5l-NRoU-__18dj3V5ihpYzONZWyzgJGBxE",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 S San Tomas Aquino Rd"
+            },
+            {
+               "offset" : 28,
+               "value" : "Campbell"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

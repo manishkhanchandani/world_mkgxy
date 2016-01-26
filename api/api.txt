@@ -1,0 +1,6 @@
+http://world.mkgalaxy.com/api/nearbycities.php?lat=37.338475&lon=-121.885794&radius=50&limit=100
+http://world.mkgalaxy.com/api/citydetail.php?id=1
+http://world.mkgalaxy.com/api/cities.php?id=3469
+http://world.mkgalaxy.com/api/nearby.php?lat=37.338475&lon=-121.885794&radius=50&limit=100
+http://world.mkgalaxy.com/api/states.php?id=223
+http://world.mkgalaxy.com/api/countries.php

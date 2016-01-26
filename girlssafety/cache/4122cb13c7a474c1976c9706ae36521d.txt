@@ -1,0 +1,135 @@
+{
+   "predictions" : [
+      {
+         "description" : "12305, Berlin, Germany",
+         "id" : "618ef74e37c61d2ca9eb9e241e0a25767aa6c3b2",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAArO7snAcHC5RotLSk7u1n9Ar-H73cBnJn1d442xAlc_BRTHlH7p_fQgTV_35L_7oAEhDR2rbtj2PiOABlEBG8p0aPGhTcBPI-kDidGW9ninHogGDZJrquiQ",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12305"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12307, Berlin, Germany",
+         "id" : "348b3561e45968b9661b50c4091fbd73bc5aefb3",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAA4HXfV9BTdTyQk8lRFtw8jFbLIMITz5plBg4rfSbu9rU_04jLkH_UmV-Wcw0u6he2EhDn6o22JCofaQLCzsWWYUztGhTWABxrYePlpoXExgYiC60fdahavQ",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12307"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12309, Berlin, Germany",
+         "id" : "1aedd81fc0754827d94b5af9467bf2a399889ce0",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAAJ4dcmwWQOLVLNGdRT6Fh-6SE6lJY4XR_hS8oxdg9mjrK5RhjRcFHkep2PXel0NrREhBGqlCcr54H0VAfcnFIQfcWGhQEkGbW7oBhen49I7f7dkS1D5nptg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12309"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "1230 Austria",
+         "id" : "5b8267feaa14e737810d00d83475a4c5e5097ad8",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQkAAAAY0s4OZPb3S-OzxDb19AdV6tuqZq33hT3LOf_2aHgCSdujzBSHssJ7WxGdixxOu8aEhA063r2D-VZegix1GJ1qvIWGhRmSruobEt0F84BPDbLXFe4zb02-A",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230"
+            },
+            {
+               "offset" : 5,
+               "value" : "Austria"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "Schenectady, NY 12309, United States",
+         "id" : "5dab3826371eaf03cec8272bca6bb8462d24b811",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 16
+            }
+         ],
+         "reference" : "CkQ8AAAAlUb0h2c5WZDTuNdFgaHCmpZQSor9TmXB5K8NQkU3pcmMUp1hUreBqtDWy28IAEs3U-AZhJ_MOFdkAzsNOqy1ohIQvhnTN--oGmzpcQTxHB4iLhoUKLHkw-xhGICio1u5Y9QysKvn2gM",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Schenectady"
+            },
+            {
+               "offset" : 13,
+               "value" : "NY"
+            },
+            {
+               "offset" : 16,
+               "value" : "12309"
+            },
+            {
+               "offset" : 23,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "locality", "political", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

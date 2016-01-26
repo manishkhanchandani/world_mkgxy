@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+var latlngA = qs["latlngA"];
+if (!latlngA) latlngA = '0,0'; //'37.781577,-122.409668';
+var explode = latlngA.split(",");
+var lata = explode[0];
+
+//if (lata == 0) lata = 37.781577;
+var lona = explode[1];
+
+//if (lona == 0) lona = -122.409668;
+var rad = qs["radius"];
+if (!rad) rad = 10;
+var query = qs["query"];
+var q;
+if (!query) {
+  query = "Community Based";
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-size:8px;
+      }
+	  #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panelfrom {
+        position: absolute;
+        top: 25px;
+        left: 55%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+<script>
+var map;
+var infowindow;
+
+function displayLocation( position ) {
+  lata = position.coords.latitude;
+  lona = position.coords.longitude;
+  doaction();
+}
+function handleError( error ) {
+	var errorMessage = [ 
+		'We are not quite sure what happened.',
+		'Sorry. Permission to find your location has been denied.',
+		'Sorry. Your position could not be determined.',
+		'Sorry. Timed out.'
+	];
+
+	alert( errorMessage[ error.code ] );
+}
+function initialize() {
+  if (lata == 0 && lona == 0) {
+    useragent = navigator.userAgent;
+     if ( navigator.geolocation ) {
+      navigator.geolocation.getCurrentPosition( displayLocation, handleError );
+    }
+  } else {
+    doaction();
+  }
+  
+}
+function doaction() {
+  var pyrmont = new google.maps.LatLng(lata, lona);
+  var image = 'map-icon-a.png';
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: pyrmont,
+    zoom: 15
+  });
+  var markerA = new google.maps.Marker({
+          map: map,
+          position: pyrmont,
+          icon: image
+      });
+
+  var r = 1609.34 * parseFloat(rad);
+  if (r > 50000) r = 50000;
+  var request = {
+    location: pyrmont,
+    radius: r,
+    keyword: query
+  };
+  infowindow = new google.maps.InfoWindow();
+  if (query == "Community Based") {
+    var url = 'http://world.mkgalaxy.com/push/push_search.php?module=1&lat='+lata+'&lon='+lona+'&radius='+parseFloat(rad);
+    $.getJSON(url, function(data) {
+        var results = data.data;
+        var c = [];
+        if (results.length > 0) {
+          for (var i = 0; i < results.length; i++) {
+            c = {'name': results[i].push_value, 'vicinity' : results[i].lat+','+results[i].lon, 'lat' : results[i].lat, 'lon' : results[i].lon, 'user' : results[i].name};
+            createMarker2(c);
+          }
+        }
+			})
+			.error(function(jqXhr, textStatus, error) { alert(textStatus);});
+  } else {
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+  }
+}
+function callback(results, status) {
+  //console.log(results);
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    var content = '<h3>'+ place.name + '</h3>';
+    content = content + '<p>' + place.vicinity + '</p>';
+    infowindow.setContent(content);
+    infowindow.open(map, this);
+  });
+}
+
+
+function createMarker2(place) {
+  var placeLoc = new google.maps.LatLng(place.lat, place.lon);
+  var marker = new google.maps.Marker({
+    map: map,
+    position: placeLoc
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    var content = '<h3>'+ place.name + '</h3>';
+    content = content + '<p>' + place.vicinity + '<br>Submitted By: <b>'+place.user+'</b></p>';
+    infowindow.setContent(content);
+    infowindow.open(map, this);
+  });
+}
+
+function curdoaction()
+{
+  query = $('#place').val();
+  if (!query) {
+    alert('please enter keyword');
+    return false;
+  }
+  doaction();
+}
+function curdoaction2()
+{
+  query = $('#place2').val();
+  doaction();
+}
+
+function curdoaction3()
+{
+  query = $('#place3').val();
+  doaction();
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+  
+<div id="panelfrom">
+      <input id="place" type="text" value="" placeholder="Enter Keyword">
+      <input type="button" value="Go" onclick="curdoaction()">
+      <input type="button" value="Community Based" id="place3" onclick="curdoaction3()"> 
+	  <br />
+	  <select id="place2" onchange="curdoaction2();">
+      <option value="Restaurants">Restaurants</option>
+    </select>
+	<input type="button" value="Find" onclick="curdoaction2();">
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>

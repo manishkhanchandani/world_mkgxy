@@ -1,0 +1,155 @@
+{
+   "predictions" : [
+      {
+         "description" : "1230 San Tomas Aquino Road, San Jose, CA, United States",
+         "id" : "e8f1648722f175e0c134968d80c3d7502dcb36fa",
+         "matched_substrings" : [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAARBSjm58XA1COw30qt26OzUGhjnDyFBZJBfG3IBze6GduL7rbA51mpbxL6_ljLKqjQuPjiVc7UGXFpNBF9lyy7xIQ_1igiBKTeO_2iNcvJcQk4RoUx8Y5XkwWugSb9dDSifVsJXgvXV0",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Road"
+            },
+            {
+               "offset" : 28,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Creek Trail, Santa Clara, CA, United States",
+         "id" : "3e22418d050f370b7c0a4b3b8b5c9e6306275041",
+         "matched_substrings" : [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRFAAAACWbS3CXSRUQCYruxGHlSPb83gGc26QwG3jIwqv2v4V2CYOAj3I2qOzwMxShmxiR06KfhdUOkcYPR-cuVbCDBalDpxgwVoJQDmn8CF2rdR9MSEK5Uem1vYmbkoAS_vHhCBhMaFHmrHWlutjolUE9Boo1PNJqF6CLs",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Creek Trail"
+            },
+            {
+               "offset" : 35,
+               "value" : "Santa Clara"
+            },
+            {
+               "offset" : 48,
+               "value" : "CA"
+            },
+            {
+               "offset" : 52,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino Parkway, San Jose, CA, United States",
+         "id" : "28cede703b633768bc72de408b6a12eb102775cc",
+         "matched_substrings" : [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ-AAAAlU2IlojhA-J0LBqN_e9A0OpSXyEvRX0OP1ZR77_60Hd8iczp68EumCeePdZzZI9imdueF2a6sKjeyJnEEoQ-chIQglosW13AjNECe14As5o5yBoUSk4IVp2_Uvnkand7Z1i30KtOe_I",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino Parkway"
+            },
+            {
+               "offset" : 31,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 41,
+               "value" : "CA"
+            },
+            {
+               "offset" : 45,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Aquino/Saratoga Creek Trail, San Jose, CA, United States",
+         "id" : "2ff3a29ae9fe89b50dd87f85e6c85c3ad6694de4",
+         "matched_substrings" : [
+            {
+               "length" : 16,
+               "offset" : 0
+            }
+         ],
+         "reference" : "ClRLAAAA3IpLBDLZW_1dSJUe7KrrrAjlk34PV8QdwZ1Y9Nw9cJO9p6U3Rpt-4DUCv2jKDj-p8FRfii1pqcBi_JPf6Bdzr4HK8tud9MJI95gSbx6qEZQSEN5SFxWDwL-lPkZjQhhuAkgaFB0BxvKU6NrR-2dQLCMQ117c0ocD",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Aquino/Saratoga Creek Trail"
+            },
+            {
+               "offset" : 44,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 54,
+               "value" : "CA"
+            },
+            {
+               "offset" : 58,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "1230 San Tomas Drive, Citrus Heights, CA, United States",
+         "id" : "e6e2a6a7aed19b5b8f31cdd881002a2c44a10587",
+         "matched_substrings" : [
+            {
+               "length" : 20,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQ7AAAACjYhEn0d9amBU86kMuZ5BcRhTrfDEY3e8WhtiOHeIBgmxMZ7LqsDf2yYYZl6WlmX5AWTZ7UCMFWdvjrWEuFKfRIQE1axgEHo148rSJdvJpT8VBoU2yhJh_-nWWk0UBzk_RWtWDzbLm4",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1230 San Tomas Drive"
+            },
+            {
+               "offset" : 22,
+               "value" : "Citrus Heights"
+            },
+            {
+               "offset" : 38,
+               "value" : "CA"
+            },
+            {
+               "offset" : 42,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

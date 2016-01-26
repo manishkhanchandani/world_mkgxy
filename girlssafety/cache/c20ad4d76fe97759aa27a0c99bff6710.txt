@@ -1,0 +1,155 @@
+{
+   "predictions" : [
+      {
+         "description" : "Gutenbergstraße 12, Flensburg, Germany",
+         "id" : "5c43dd793b4e4c890268e3913af805c347681abc",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 16
+            }
+         ],
+         "reference" : "CjQrAAAAZZ1hFnrXduUJFjUj5CO9zEWlaUBPjgK4ACD3bGFdvPD4hoAUw0sMZByrgraqs-H3EhBa6KQ15CxeA62Ge3QgtVqVGhTiP9MN_QcB7hIF_XUTP5fjag0Dxw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Gutenbergstraße"
+            },
+            {
+               "offset" : 16,
+               "value" : "12"
+            },
+            {
+               "offset" : 20,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 31,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Munketoft 12, Flensburg, Germany",
+         "id" : "ae540df705a029aa45ca6615d2292d6bcefcc264",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 10
+            }
+         ],
+         "reference" : "CjQkAAAALicq1F7jca0q8mEVbtjJHf8ilPIJGl-qtWJux7BoCBhYDA5SjINlKmpJELJD0zYNEhB4SdTJhP55uzq_mIp5b6l6GhQsgpwavBSuN7catXCdGjZzI5O5ow",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Munketoft"
+            },
+            {
+               "offset" : 10,
+               "value" : "12"
+            },
+            {
+               "offset" : 14,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 25,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Liebigstraße 12, Flensburg, Germany",
+         "id" : "dbcebbd82affb81e5ca19ece03578ad979b588f7",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 13
+            }
+         ],
+         "reference" : "CjQoAAAAx_lWXYwSZc6zkrZMmNo6Crlm9i-QvNUygnpZKXCvImHv_NgI5BQaWeJLQ1plGRNWEhDAUFhC60NdN7-WlBzSXi8XGhR9E5A0VX_oS8DB510LMNYJKam0rw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Liebigstraße"
+            },
+            {
+               "offset" : 13,
+               "value" : "12"
+            },
+            {
+               "offset" : 17,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 28,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Drosselweg 12, Flensburg, Germany",
+         "id" : "0aede79c31725005341953e2b9e1a560c0e4f050",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 11
+            }
+         ],
+         "reference" : "CjQlAAAAxSERJWfx3OO2BVMnX2ZYus0lzBllgM7YkfTYZTsgLga8hm94-iy7pIJ0e0laaTGaEhB19oKS8yqmJHqFPrMKO8OkGhRJuOAMv9S3c21l1IoiGoM3dkj5Bw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Drosselweg"
+            },
+            {
+               "offset" : 11,
+               "value" : "12"
+            },
+            {
+               "offset" : 15,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 26,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Schleswiger Straße 128, Flensburg, Germany",
+         "id" : "51b6f530eb28a5bb61385831b478ff51af51290c",
+         "matched_substrings" : [
+            {
+               "length" : 3,
+               "offset" : 19
+            }
+         ],
+         "reference" : "CjQvAAAAEykxIU_3puJqp_oETDHfjFx2uLlbYtVS4xo2tTQQvq0gciFNTkTB6Pn6NSuJHqouEhDkXZSvYLJfp0S5SbhwY7DbGhSl4E-V2t1knBXprQsMn0EaO_WulA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Schleswiger Straße"
+            },
+            {
+               "offset" : 19,
+               "value" : "128"
+            },
+            {
+               "offset" : 24,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 35,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

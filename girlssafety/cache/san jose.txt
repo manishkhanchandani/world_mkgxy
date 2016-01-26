@@ -1,0 +1,131 @@
+{
+   "predictions" : [
+      {
+         "description" : "San Jose, CA, United States",
+         "id" : "c00d0e6ed23a5a6b418841457b33c47430a93a4c",
+         "matched_substrings" : [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQzAAAAgH9HLY11tCIGfmrhYQkIrsXLZBSnKHN3aa7zXNanlhV5cVNftBPiHdID3jjfIE3l_CmkIP9vQXY1Pxuzu6Y5zxIQb-gBGNV5SXJJrb-P3MksTxoUF45Dt_THPO6sutAgN31YuBaFtbg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 10,
+               "value" : "CA"
+            },
+            {
+               "offset" : 14,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "locality", "political", "geocode" ]
+      },
+      {
+         "description" : "San Jose, Costa Rica",
+         "id" : "f7197675a1f5732501d51945460da1f5e0ea9ed8",
+         "matched_substrings" : [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQsAAAAvq6YUgisTd5q0a3xTKrIjeHyXgYv5V1FW32N7DpI8HuBdy_RPZiDCQbphrEcAsWHEhCHOQcYuL9UMMaLZJLygQCSGhQSDYLCfK1vFJtjy-RR4OTF0YsdPw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 10,
+               "value" : "Costa Rica"
+            }
+         ],
+         "types" : [ "locality", "political", "geocode" ]
+      },
+      {
+         "description" : "San José del Cabo, Mexico",
+         "id" : "b68d255e683137c8bcc190a5c9b94f33615236bb",
+         "matched_substrings" : [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQyAAAAwoW8cEkQjvSC3CbmfqrT1gjUq79uy1YOg4MYeDMZzJwrfLvlJW_iWNJKsFHyC5pw2yCP1_mfXHe3zfLOPCwiYRIQp2TmU92BVTYRl3Z_vwFemRoUQkIfVjkix3i0zU3JyeYGjEsV_pU",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San José del Cabo"
+            },
+            {
+               "offset" : 19,
+               "value" : "Mexico"
+            }
+         ],
+         "types" : [ "locality", "political", "geocode" ]
+      },
+      {
+         "description" : "San José Iturbide, Mexico",
+         "id" : "8c43ed0fa24f766ae93a3a54dc917507254d454a",
+         "matched_substrings" : [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQyAAAA5HegOdkrcpFsd_igWIvVkvn_98QOF1K3fQQn9C-X9KD5dSsB2-R3kFpYGJQvS9bcBhW8L8yx_6XkIkbFzcqqahIQd0XgMLynzb3vMHsFhuOlexoU6xD503WkvaypBMoKbnIp5egAo0w",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San José Iturbide"
+            },
+            {
+               "offset" : 19,
+               "value" : "Mexico"
+            }
+         ],
+         "types" : [ "locality", "political", "geocode" ]
+      },
+      {
+         "description" : "San Jose International Airport-Sjc, Airport Boulevard, San Jose, CA, United States",
+         "id" : "2f215636bac933e493adba23bfef4d54fd6d2fc5",
+         "matched_substrings" : [
+            {
+               "length" : 8,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CnRhAAAAaDUH_ACRlilI77bP3I3xjwOpl6HKKwv6Ry82XSzg7BxFS5MxxBnW1kMFaPxLG2zg5E-UsXuhmgKDUun-bqKwxQrCh2MH-6jqnef-zrU4t2oECBNqyhkfQ8hLdHWESRr9kna8MKz_jAYw4bmIoX4LshIQMUzUBd2ZQ0hnw-8XdZ9OgRoUiD1wccFJgGztRVMTQkiJwXujgKQ",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "San Jose International Airport-Sjc"
+            },
+            {
+               "offset" : 36,
+               "value" : "Airport Boulevard"
+            },
+            {
+               "offset" : 55,
+               "value" : "San Jose"
+            },
+            {
+               "offset" : 65,
+               "value" : "CA"
+            },
+            {
+               "offset" : 69,
+               "value" : "United States"
+            }
+         ],
+         "types" : [ "establishment", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

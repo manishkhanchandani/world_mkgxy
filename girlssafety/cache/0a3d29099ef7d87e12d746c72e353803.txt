@@ -1,0 +1,135 @@
+{
+   "predictions" : [
+      {
+         "description" : "Sandberg 1230, Flensburg, Germany",
+         "id" : "6c98badcc999ffe38570c9287599f9d29bbb3897",
+         "matched_substrings" : [
+            {
+               "length" : 13,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQlAAAAu_7GVkZLJ2-ykuJ_LW4QL447M3KTMGKjdYJT20qP30tWX-jblP5m_uXMYZRCmHdZEhBX45RFWB_G8udWRRew9sopGhRAL3ihvIN8-IEJ-N_aEBgdEBr15w",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Sandberg 1230"
+            },
+            {
+               "offset" : 15,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 26,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Sankt-Jürgen-Straße 1230, Flensburg, Germany",
+         "id" : "4b6815efb99f674c46513ac5f5af2891add90587",
+         "matched_substrings" : [
+            {
+               "length" : 24,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQyAAAAX5N0Kj3GUDinIK0QCZbLpXkV49pb4VEnivIWpAGs4vvRjcxHHqzUie5rf-xW35eR90qYfUXSKKt9AP_faGYVPhIQdmuJxWBnffV0fTnD6uUKEhoUVr4k7mzIJYKKYc-PkmQO8XkNoDI",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Sankt-Jürgen-Straße 1230"
+            },
+            {
+               "offset" : 26,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 37,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Sankt-Jürgen-Winkel 1230, Flensburg, Germany",
+         "id" : "36d6346bc2a8010072ab1011ad1aed1bfb815bde",
+         "matched_substrings" : [
+            {
+               "length" : 24,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQxAAAAUaxYQBetrLBqvo90L2p13_puQYPd5-oP_afg4lc_0C5388kdIb217O4X_lBGBtIpAziO3ZVRK4vBUQ1mCcpo6hIQP3zjCnbPMhw_-9Dw4Cjn3hoUakxPQFlYmPPLK9BgRF18QJuS-AA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Sankt-Jürgen-Winkel 1230"
+            },
+            {
+               "offset" : 26,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 37,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Sankt-Jürgen-Platz 1230, Flensburg, Germany",
+         "id" : "d4a5050b57cf58c4b542b8158dff470ad4808826",
+         "matched_substrings" : [
+            {
+               "length" : 23,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQwAAAAwzTdIUhq7qB0ngeRskmdYgMtqB73_efj7xPiKGa2HIJdBA88s8chTZJfomHW3inJEhDlu_IuiMbtmfPgySvaQEhsGhRIdFCSQaMCBkOGfYoFKKKN_TUfPA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Sankt-Jürgen-Platz 1230"
+            },
+            {
+               "offset" : 25,
+               "value" : "Flensburg"
+            },
+            {
+               "offset" : 36,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      },
+      {
+         "description" : "Sandwigstraße 1230, Glücksburg, Germany",
+         "id" : "4a70de94bacde3ec4f0a6feda7825e2065779573",
+         "matched_substrings" : [
+            {
+               "length" : 18,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQtAAAAxO-fWoltLPGjKtZedD4KfR5qPCxC_lYLekAHJRLfKjEDnIVECbrGf8MSdiu_dHt_EhD6iSQ-6x_Pjh9f_v1HO3GEGhQzPJF3OhNGF3dYk3S6ICVb-2vWAw",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "Sandwigstraße 1230"
+            },
+            {
+               "offset" : 20,
+               "value" : "Glücksburg"
+            },
+            {
+               "offset" : 32,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "route", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

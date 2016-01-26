@@ -1,0 +1,131 @@
+{
+   "predictions" : [
+      {
+         "description" : "12347, Berlin, Germany",
+         "id" : "3f56d16f8dfcbc758a04bfd2d8d215433db6543c",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAAM1oe36qlFFjhc_sb7PCtTPBa6NJ_gIFoNv2hPSmh-ll3055-SCtjQ_Kt9eGFe_IeEhB2lTDRuTgDnW0SRbgJNN06GhSD4pekORgCqx7YC_o1eQDVBDbgKg",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12347"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12349, Berlin, Germany",
+         "id" : "e20f4041d7a4a2c25bbf56c4148488acbe2847e6",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQuAAAAskMqeqezM_HdP-qR3u9rupv0t4m4Ep0IodN_iV8m5IINNW45bqvAbV5vFIAnMccxEhCUViOdFrokTHwI8ayhxQa6GhSb8aohnCm31dsduE6y1Lo2vy33SA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12349"
+            },
+            {
+               "offset" : 7,
+               "value" : "Berlin"
+            },
+            {
+               "offset" : 15,
+               "value" : "Germany"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "1234 Veyrier, Switzerland",
+         "id" : "3c9d911991d248e4dc988749843d5b4c56ca7027",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CkQxAAAAmk-ALov-3LQeYAkf7j70Pr2MvKdGwbBgSuAMRMR5cdq5b8SgEBqDfEyFJs1rsGbrIM4tQm0LuhwBPMTBgSkq2xIQHztEFLU9hx7HpAUWpFLfKBoUMqHjvSygBf_SWEqgNTVVmbdEloM",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1234"
+            },
+            {
+               "offset" : 5,
+               "value" : "Veyrier"
+            },
+            {
+               "offset" : 14,
+               "value" : "Switzerland"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "12340 Cruéjouls, France",
+         "id" : "6fdc3fbad8a5a41101fe6f611acc42d1fc0f110f",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQwAAAAVT4fYiv2xZa3mLu2KNA0KNGkxDx0Xep8fxFN5RFD70I_Ts4v2UqsLwOsZTynXtHoEhAZ1odRDGiAVBOmr302slJyGhRWbk80e2QtCmYXQtKhoblkvtg_fA",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "12340"
+            },
+            {
+               "offset" : 6,
+               "value" : "Cruéjouls"
+            },
+            {
+               "offset" : 17,
+               "value" : "France"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      },
+      {
+         "description" : "1234, Slovenia",
+         "id" : "2ca62dd81d6dd8bc98e1e03d6a6e0c46fb98534f",
+         "matched_substrings" : [
+            {
+               "length" : 4,
+               "offset" : 0
+            }
+         ],
+         "reference" : "CjQmAAAAa97WSFgXzmMEyvSDHEpm1vxoatXYKMxl8YpzNsfkdBSRRM9PA_03Efz2a9M_iJ5YEhBZ22gp1rlwnKtVJCjPdUKOGhRys_ExWsHFwcjyEC4OdFUWTnMC5w",
+         "terms" : [
+            {
+               "offset" : 0,
+               "value" : "1234"
+            },
+            {
+               "offset" : 6,
+               "value" : "Slovenia"
+            }
+         ],
+         "types" : [ "postal_code", "geocode" ]
+      }
+   ],
+   "status" : "OK"
+}

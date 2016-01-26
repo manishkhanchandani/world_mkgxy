@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Geocoding service</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panelfrom {
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+var lat = qs["lat"];
+var lon = qs["lon"];
+if (!lat) lat = 37.338475;
+if (!lon) lon = -121.885794;
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script>
+	var initialLocation;
+var geocoder;
+var map;
+var marker, marker2;
+var start, end;
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+  var imagea = '../images/map-icon-a.png';
+  var imageb = '../images/map-icon-b.png';
+function initialize() {
+	directionsDisplay = new google.maps.DirectionsRenderer();
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(lat, lon);
+  var mapOptions = {
+    zoom: 17,
+    center: latlng,
+    panControl: true,
+    zoomControl: true,
+    scaleControl: true
+  }
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById('directions-panel'));
+  codeAddress();
+  codeAddressto();
+}
+
+function codeAddress() {
+  var address = document.getElementById('address').value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+		start = results[0].geometry.location;
+      map.setCenter(results[0].geometry.location);
+      marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+	  		icon: imagea,
+	  draggable:true,
+      });
+	  google.maps.event.addListener(marker, 'dragend', function() {
+		//document.title = marker.getPosition().lat() + "," + marker.getPosition().lng();
+		start = new google.maps.LatLng(marker.getPosition().lat(),marker.getPosition().lng());
+	  });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+
+function codeAddressto() {
+  var address = document.getElementById('addressto').value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+		end = results[0].geometry.location;
+      map.setCenter(results[0].geometry.location);
+      marker2 = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+	  		icon: imageb,
+	  draggable:true,
+      });
+	  google.maps.event.addListener(marker2, 'dragend', function() {
+		//document.title = marker.getPosition().lat() + "," + marker.getPosition().lng();
+		end = new google.maps.LatLng(marker2.getPosition().lat(),marker2.getPosition().lng());
+	  });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+function calcRoute() {
+	marker.setMap(null);
+	marker2.setMap(null);
+	var selectedMode = document.getElementById('mode').value;
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode[selectedMode],
+	  provideRouteAlternatives: true
+  };
+  directionsService.route(request, function(response, status) {
+	  console.log(response);
+	  
+    if (status == google.maps.DirectionsStatus.OK) {
+		for (var i = 0, len = response.routes.length; i < len; i++) {
+			//console.log(response.routes[i].legs[0].steps);
+			var obj = response.routes[i].legs[0].steps;
+			for (var prop in obj) {
+				console.log(obj[prop]);
+				console.log(obj[prop].instructions + ", Mode: " + obj[prop].travel_mode + ", Distance: " + obj[prop].distance.text);
+			}
+			new google.maps.DirectionsRenderer({
+				map: map,
+				directions: response,
+				routeIndex: i
+			});
+		}
+      //directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+<body>
+<div id="panelfrom">
+      <input id="address" type="textbox" value="6384 Leyland Park Dr, San Jose, CA 95120">
+      <input type="button" value="From" onclick="codeAddress()">
+	  <br />
+      <input id="addressto" type="textbox" value="1240 San Tomas Aquino Rd, San Jose, CA 95117">
+      <input type="button" value="To" onclick="codeAddressto()"> 
+	  <select id="mode" onchange="calcRoute();">
+      <option value="TRANSIT">Transit</option>
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+    </select>
+	<input type="button" value="Route" onclick="calcRoute();">
+    </div>
+<div id="map-canvas"></div>
+
+  </body>
+</html>

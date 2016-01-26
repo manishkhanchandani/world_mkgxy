@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crime Feed</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="FeedEk.js"></script>
+<script language="javascript">
+$('#divRss').FeedEk({
+	FeedUrl : 'http://www.topix.com/rss/county/alameda-ca',
+	ShowDesc : true,
+	ShowPubDate:true,
+	MaxCount: 50
+});
+</script>
+<link href="FeedEk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="divRss"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script language="javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+
+<script>
+var geocoder;
+function displayLocation( position ) {
+  var lat = position.coords.latitude;
+  var lng = position.coords.longitude;
+  document.title = lat + "|" + lng + "| ";
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(lat, lng);
+    geocoder.geocode({'latLng': latlng}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        console.log(results);
+        var len = (results[0].address_components).length;
+        var zip =  results[0].address_components[(len-1)].short_name;
+        var country =  results[0].address_components[(len-2)].short_name;
+        var state =  results[0].address_components[(len-3)].short_name;
+        var county =  results[0].address_components[(len-4)].short_name;
+        var city =  results[0].address_components[(len-5)].short_name;
+        document.title = lat + "|" + lng + "|" + results[0].formatted_address + "|" + zip + "|" + city + "|" + state + "|" + country + "|" + county;
+        console.log(document.title);
+      } else {
+        //alert("Geocoder failed due to: " + status);
+      }
+    });
+  
+  
+}
+function handleError( error ) {
+	var errorMessage = [ 
+		'We are not quite sure what happened.',
+		'Sorry. Permission to find your location has been denied.',
+		'Sorry. Your position could not be determined.',
+		'Sorry. Timed out.'
+	];
+
+	alert( errorMessage[ error.code ] );
+}
+function initialize() {
+    navigator.geolocation.getCurrentPosition( displayLocation, handleError );
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
